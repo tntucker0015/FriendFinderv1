@@ -5,7 +5,7 @@
 // ===============================================================================
 
 var friendsData = require("../data/friends.js");
-var neData = require("../data/waitinglistData");
+var inputData = require("../data/friends");
 
 
 // ===============================================================================
