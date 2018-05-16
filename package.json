@@ -1,0 +1,24 @@
+{
+  "name": "friendfinderv1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tntucker0015/FriendFinderv1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tntucker0015/FriendFinderv1/issues"
+  },
+  "homepage": "https://github.com/tntucker0015/FriendFinderv1#readme"
+}
