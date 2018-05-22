@@ -3,189 +3,407 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Reservation Page</title>
+  <title>Survey Page</title>
 
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- font Awesome Glyphicons -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!-- chosen  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 </head>
 
 <body>
-
   <div class="container">
-
-    <div class="jumbotron">
-      <h1 class="text-center">
-        <span class="fa fa-user-plus"></span> Find Your Transformer Friend</h1>
-      <hr>
-      <h2 class="text-center">Fill out the Survey</h2>
-      <br>
-
-      <div class="text-center">
-        <a href="/tables">
-          <button class="btn btn-lg btn-primary">
-            <span class="fa fa-list-alt"></span> View Tables</button>
-        </a>
+    ::before
+    <h2> Fill out the Survey Qustions</h2>
+    <hr>
+    <h3>
+      <strong>About You</strong>
+    </h3>
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required>
+    <h4>Link to Photo Image (Required)</h4>
+    <input type="text" id="photo" class="form-control" required>
+    <hr>
+    <h3>
+      <strong>Question 1</strong>
+    </h3>
+    <h4>In a work setting, you would rather lead than follow</h4>
+    <select class="chosen-select" id="q1" style="display: none;">
+      <option value></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <div class="chosen-container chosen-container-single" style="width: 157px;" title id="q1_chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+        <div>
+          <b></b>
+        </div>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1" style>1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2" style>2</li>
+          <li class="active-result" data-option-array-index="3" style>3</li>
+          <li class="active-result" data-option-array-index="4" style>4</li>
+          <li class="active-result" data-option-array-index="5" style>5 (Strongly Agree)</li>
+        </ul>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-12">
-
-        <!-- Reservation Page -->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">Pick the answer that matches your personality best</h4>
+    <h3>
+        <strong>Question 2:</strong>
+      </h3>
+      <h4>In a work setting, you would rather lead than follow</h4>
+    <select class="chosen-select" id="q2" style="display: none;">
+        <option value><</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <div class="chosen-container chosen-container-single" style="width: 157px;" title id="q2-chosen">
+        <a class="chosen-single chosen-default">
+          <span>Select an Option</span>
+          <div>
+            <b></b>
           </div>
-          <div class="panel-body">
-
-            <form role="form">
-                <div>
-                  <p>What is your Favorite color?</p>
-                  <input type="radio" id="Q1A1" name="question1" value=1>
-                  <label for="Q1A1">Red</label>
-                  <input type="radio" id="Q1A2" name="question1" value=2>
-                  <label for="Q1A2">Blue</label>
-                  <input type="radio" id="Q1A3" name="question1" value=3>
-                  <label for="Q1A3">Yellow</label>
-                  <input type="radio" id="Q1A4" name="question1" value=4>
-                  <label for="Q1A4">Black</label>
-                  <input type="radio" id="Q1A5" name="question1" value=5>
-                  <label for="Q1A5">Pink</label>
-                </div>
-                <br />
-                <div>
-                  <p>What is your Favorite Food?</p>
-                  <input type="radio" id="Q2A1" name="question2" value=1>
-                  <label for="Q2A1">Pizza</label>
-                  <input type="radio" id="Q2A2" name="question2" value=2>
-                  <label for="Q2A2">Cheeseburger</label>
-                  <input type="radio" id="Q2A3" name="question2" value=3>
-                  <label for="Q2A3">Steak</label>
-                  <input type="radio" id="Q2A4" name="question2" value=4>
-                  <label for="Q2A4">Salad</label>
-                  <input type="radio" id="Q2A5" name="question2" value=5>
-                  <label for="Q2A5">Tofu</label>
-                </div>
-                <br />
-                <div>
-                  <p>What is your Favorite Place for a Vacation?</p>
-                  <input type="radio" id="Q3A1" name="question3" value=1>
-                  <label for="Q3A1">Hawaii</label>
-                  <input type="radio" id="Q3A2" name="question3" value=2>
-                  <label for="Q3A2">Denver</label>
-                  <input type="radio" id="Q3A3" name="question3" value=3>
-                  <label for="Q3A3">Grand Canyon</label>
-                  <input type="radio" id="Q3A4" name="question3" value=4>
-                  <label for="Q3A4">Florida</label>
-                  <input type="radio" id="Q3A5" name="question3" value=5>
-                  <label for="Q3A5">Staycation</label>
-                </div>
-                <br />
-                <div>
-                    <p>What is your Highest Leve of Education?</p>
-                    <input type="radio" id="Q4A1" name="question4" value=1>
-                    <label for="Q4A1">High School</label>
-                    <input type="radio" id="Q4A2" name="question4" value=2>
-                    <label for="Q4A2">Some College</label>
-                    <input type="radio" id="Q4A3" name="question4" value=3>
-                    <label for="Q4A3">Associates Degree</label>
-                    <input type="radio" id="Q4A4" name="question4" value=4>
-                    <label for="Q4A4">Bachelors Degree</label>
-                    <input type="radio" id="Q4A5" name="question4" value=5>
-                    <label for="Q4A5">Masters Degree</label>
-                  </div>
-                  <br />
-                  <div>
-                      <p>What is your Favorite Team?</p>
-                      <input type="radio" id="Q5A1" name="question5" value=1>
-                      <label for="Q5A1">Blue Devils</label>
-                      <input type="radio" id="Q5A2" name="question5" value=2>
-                      <label for="Q5A2">Wolf Pack</label>
-                      <input type="radio" id="Q5A3" name="question5" value=3>
-                      <label for="Q5A3">Tar Heels</label>
-                      <input type="radio" id="Q5A4" name="question5" value=4>
-                      <label for="Q5A4">Hurricanes</label>
-                      <input type="radio" id="Q5A5" name="question5" value=5>
-                      <label for="Q5A5">Bulls</label>
-                    </div>
-                <div>
-                  <button type="submit" class="btn btn-primary submit">Submit</button>
-                </div>
-              <!-- </form> -->
+        </a>
+        <div class="chosen-drop">
+          <div class="chosen-search">
+            <input type="text" autocomplete="off">
           </div>
+          <ul class="chosen-results"></ul>
         </div>
       </div>
+
+      <h3>
+      <strong>Question 3:</strong>
+    </h3>
+    <h4>In a work setting, you would rather lead than follow</h4>
+  <select class='chosen-select' id='q3' style='display: none;'>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <div class="chosen-container chosen-container-single" style="width: 157px;" title id="q3-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+        <div>
+          <b></b>
+        </div>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results"></ul>
+      </div>
     </div>
 
-
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/friends">Friends Link</a> | <a href="https://github.com/tntucker0015/FriendFinderv1">GitHub Repo</a></p>
+    <h3>
+    <strong>Question 4:</strong>
+  </h3>
+  <h4>In a work setting, you would rather lead than follow</h4>
+<select class='chosen-select' id='q4' style='display: none;'>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <div class="chosen-container chosen-container-single" style="width: 157px;" title id="q4-chosen">
+    <a class="chosen-single chosen-default">
+      <span>Select an Option</span>
+      <div>
+        <b></b>
       </div>
-    </footer>
-
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div>
   </div>
 
-</body>
+  <h3>
+  <strong>Question 5:</strong>
+</h3>
+<h4>In a work setting, you would rather lead than follow</h4>
+<select class='chosen-select' id='q5' style='display: none;'>
+  <option value="1">1 (Strongly Disagree)</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5 (Strongly Agree)</option>
+</select>
+<div class="chosen-container chosen-container-single" style="width: 157px;" title id="q5-chosen">
+  <a class="chosen-single chosen-default">
+    <span>Select an Option</span>
+    <div>
+      <b></b>
+    </div>
+  </a>
+  <div class="chosen-drop">
+    <div class="chosen-search">
+      <input type="text" autocomplete="off">
+    </div>
+    <ul class="chosen-results"></ul>
+  </div>
+</div>
 
-</html>
+<h3>
+<strong>Question 6:</strong>
+</h3>
+<h4>In a work setting, you would rather lead than follow</h4>
+<select class='chosen-select' id='q6' style='display: none;'>
+  <option value="1">1 (Strongly Disagree)</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5 (Strongly Agree)</option>
+</select>
+<div class="chosen-container chosen-container-single" style="width: 157px;" title id="q6-chosen">
+  <a class="chosen-single chosen-default">
+    <span>Select an Option</span>
+    <div>
+      <b></b>
+    </div>
+  </a>
+  <div class="chosen-drop">
+    <div class="chosen-search">
+      <input type="text" autocomplete="off">
+    </div>
+    <ul class="chosen-results"></ul>
+  </div>
+</div>
+
+<h3>
+<strong>Question 7:</strong>
+</h3>
+<h4>In a work setting, you would rather lead than follow</h4>
+<select class='chosen-select' id='q7' style='display: none;'>
+  <option value="1">1 (Strongly Disagree)</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5 (Strongly Agree)</option>
+</select>
+<div class="chosen-container chosen-container-single" style="width: 157px;" title id="q7-chosen">
+  <a class="chosen-single chosen-default">
+    <span>Select an Option</span>
+    <div>
+      <b></b>
+    </div>
+  </a>
+  <div class="chosen-drop">
+    <div class="chosen-search">
+      <input type="text" autocomplete="off">
+    </div>
+    <ul class="chosen-results"></ul>
+  </div>
+</div>
+
+<h3>
+<strong>Question 8:</strong>
+</h3>
+<h4>In a work setting, you would rather lead than follow</h4>
+<select class='chosen-select' id='q8' style='display: none;'>
+  <option value="1">1 (Strongly Disagree)</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5 (Strongly Agree)</option>
+</select>
+<div class="chosen-container chosen-container-single" style="width: 157px;" title id="q8-chosen">
+  <a class="chosen-single chosen-default">
+    <span>Select an Option</span>
+    <div>
+      <b></b>
+    </div>
+  </a>
+  <div class="chosen-drop">
+    <div class="chosen-search">
+      <input type="text" autocomplete="off">
+    </div>
+    <ul class="chosen-results"></ul>
+  </div>
+</div>
+
+<h3>
+    <strong>Question 9:</strong>
+    </h3>
+    <h4>In a work setting, you would rather lead than follow</h4>
+    <select class='chosen-select' id='q9' style='display: none;'>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <div class="chosen-container chosen-container-single" style="width: 157px;" title id="q9-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+        <div>
+          <b></b>
+        </div>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results"></ul>
+      </div>
+    </div>
+
+    <h3>
+        <strong>Question 10:</strong>
+        </h3>
+        <h4>In a work setting, you would rather lead than follow</h4>
+        <select class='chosen-select' id='q10' style='display: none;'>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <div class="chosen-container chosen-container-single" style="width: 157px;" title id="q10-chosen">
+          <a class="chosen-single chosen-default">
+            <span>Select an Option</span>
+            <div>
+              <b></b>
+            </div>
+          </a>
+          <div class="chosen-drop">
+            <div class="chosen-search">
+              <input type="text" autocomplete="off">
+            </div>
+            <ul class="chosen-results"></ul>
+          </div>
+        </div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+      Submit</button>
+      <hr>
+    <footer class="footer">
+      <div class="container">
+        ::before
+        <p>
+          <a href="/api/friends">Friends Link</a> |
+          <a href="https://github.com/tntucker0015/FriendFinderv1">GitHub Repo</a>
+        </p>
+        ::after
+      </div>
+    </footer>
+    ::after
+  </div>
+  <!-- Modal -->
+<div id="results-modal" class="modal-fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">x</button>
+        <h2 class="modal-title">
+          <strong>Best Match</strong>
+        </h2>
+      </div>
+      <div class="modal-body">
+        <h2 id="match-name"></h2>
+        <img id="match-img" src="https://www.sideshowtoy.com/wp-content/uploads/2015/07/902502_Product_feature.jpg" alt>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
-  // // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+var config ={
+  ".chosen-select":{},
+  ".chosen-select-deselect": {
+    allow_single_deselect: true
+  },
+  ".chosen-select-no-single": {
+    disable_search_thresold: 10
+  },
+  ".chosen-select-no-results": {
+    no_results_text: "Oops, Nothing Found!"
+  },
+  ".chosen-select-width": {
+    width: "95%"
+  }
+};
+
+for (var selector in config) {
+  $(selector).chosen(config[selector]);
+}
+
+$("#submit").on("click", function(event) {
+  event.preventDefault();
+  
+  function validateForm() {
+    var isValid = true;
+    $(".form-control").each(function() {
+      if ($(this).val()==="") {
+        isValid = false;
+      }
+    });
+    $(".chosen-select").each(function() {
+      if ($(this).val() ==="") {
+        isValid = false;
+      }
+    });
+    return isValid;
+  }
+  if (validateForm()) {
+    var userData = {
+      name: $("#name").val(),
+      photo: $("#photo").val(),
+      scores: [
+        $("#q1").val(),
+        $("#q2").val(),
+        $("#q3").val(),
+        $("#q4").val(),
+        $("#q5").val(),
+        $("#q6").val(),
+        $("#q7").val(),
+        $("#q8").val(),
+        $("#q9").val(),
+        $("#q10").val(),
+      ]
+    };
+    $.post("/api/freinds", userData, function(data) {
+      $("#match-name").text(data.name);
+      $("#match-img").attr(data.photo);
+      $("#results-modal").modal("toggle");
+    });
+  } else {
+    alert("please fill out all fields before submitting!");
+  }
+});
+</script>
+</body>
+</html>
+  <!-- // // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
   // // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
   // // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-  // // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-
-  $(".submit").on("click", function (event) {
-    event.preventDefault();
-
-  //   // Here we grab the form elements
-  let answersArr = [];
-  const question1 = $("input[type='radio'][name='question1']:checked").val();
-  const question2 = $("input[type='radio'][name='question2']:checked").val();
-  const question3 = $("input[type='radio'][name='question3']:checked").val();
-  const question4 = $("input[type='radio'][name='question4']:checked").val();
-  const question5 = $("input[type='radio'][name='question5']:checked").val();
-  
-  answersArr.push(question1);
-  answersArr.push(question2);
-  answersArr.push(question3);
-  answersArr.push(question4);
-  answersArr.push(question5);
-
-    console.log(answersArr);
-  });
-
-  //   // This line is the magic. It"s very similar to the standard ajax function we used.
-  //   // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-  //   // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-  //   // depending on if a tables is available or not.
-
-  //   $.post("/api/tables", newReservation,
-  //     function (data) {
-
-  //       // If a table is available... tell user they are booked.
-  //       if (data) {
-  //         alert("Yay! You are officially booked!");
-  //       }
-
-  //       // If a table is available... tell user they on the waiting list.
-  //       else {
-  //         alert("Sorry you are on the wait list");
-  //       }
-
-  //       // Clear the form when submitting
-  //       $("#reserve-name").val("");
-  //       $("#reserve-phone").val("");
-  //       $("#reserve-email").val("");
-  //       $("#reserve-unique-id").val("");
-
-  //     });
-
-  // });
-</script>
+   // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file -->
